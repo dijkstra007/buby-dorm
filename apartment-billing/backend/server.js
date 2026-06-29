@@ -183,7 +183,7 @@ app.post('/api/ocr', upload.single('image'), async (req, res) => {
     // Convert image to base64 for Gemini
     const base64Image = imageBuffer.toString('base64');
     
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash" });
     
     const prompt = `Extract room numbers (1-10) and electricity readings. Return JSON: {"readings":[{"room_number":"1","current_reading":"123.45"}]}`;
 
